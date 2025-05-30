@@ -53,7 +53,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/yourusername/seat-picker"
+                  href="https://github.com/chochodev/seat-picker-lib"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base text-gray-300 hover:text-white"
@@ -63,7 +63,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/yourusername/seat-picker/issues"
+                  href="https://github.com/chochodev/seat-picker-lib/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base text-gray-300 hover:text-white"
