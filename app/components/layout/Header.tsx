@@ -67,7 +67,7 @@ export function Header() {
             Showcase
           </Link>
           <a
-            href="https://github.com/yourusername/seat-picker"
+            href="https://github.com/chochodev/seat-picker-lib"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl text-gray-400 hover:text-white transition"
@@ -130,7 +130,7 @@ export function Header() {
               Showcase
             </Link>
             <a
-              href="https://github.com/yourusername/seat-picker"
+              href="https://github.com/chochodev/seat-picker-lib"
               target="_blank"
               rel="noopener noreferrer"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white flex items-center gap-2"
