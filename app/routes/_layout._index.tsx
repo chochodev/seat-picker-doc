@@ -15,7 +15,7 @@ export default function Index() {
   return (
     <section className="relative flex min-h-[80vh] flex-col items-center justify-center pb-24 pt-16 text-center">
       <div className="mx-auto max-w-7xl px-4">
-        <h1 className="text-balance text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-7xl">
+        <h1 className="text-balance text-4xl font-[600] tracking-tighter text-white sm:text-5xl md:text-7xl">
           Rapidly build{' '}
           <span className="bg-gradient-to-tr from-sky-400 to-indigo-500 bg-clip-text text-transparent">
             modern seat layouts
@@ -29,8 +29,8 @@ export default function Index() {
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
           <Link
-            to="/docs/getting-started"
-            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-tr from-sky-400 to-indigo-500 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:from-sky-500 hover:to-indigo-400 focus:outline-none focus:ring-2 focus:ring-sky-400"
+            to="/docs/installation"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-slate-700 to-gray-700 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:from-slate-600 hover:to-gray-600 ease-250 focus:outline-none focus:ring-2 focus:ring-sky-400"
           >
             Get started <FiArrowRight className="ml-1" />
           </Link>

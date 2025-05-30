@@ -1,16 +1,11 @@
-import {
-  Links,
-  Meta,
-  Scripts,
-  ScrollRestoration,
-} from '@remix-run/react';
+import { Links, Meta, Scripts, ScrollRestoration, Outlet } from '@remix-run/react';
 import type { LinksFunction } from '@remix-run/node';
-import { MainLayout } from './components/layout/MainLayout';
 
 import './tailwind.css';
 
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+  { rel: 'icon', href: '/images/brand-svg.svg' },
   {
     rel: 'preconnect',
     href: 'https://fonts.gstatic.com',
@@ -22,29 +17,20 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export default function App() {
   return (
     <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/brand-svg.svg" />
         <Meta />
         <Links />
       </head>
       <body>
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
-  );
-}
-
-export default function App() {
-  return (
-    <Layout>
-      <MainLayout />
-    </Layout>
   );
 }

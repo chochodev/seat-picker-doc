@@ -1,8 +1,8 @@
 import { Outlet } from '@remix-run/react';
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { Header } from '~/components/layout/Header';
+import { Footer } from '~/components/layout/Footer';
 
-export function MainLayout() {
+export default function MainLayout() {
   return (
     <div className="flex min-h-screen flex-col bg-slate-950">
       <Header />

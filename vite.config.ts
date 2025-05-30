@@ -35,4 +35,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  css: {
+    devSourcemap: true, // Enable CSS source maps in dev
+  },
 });
