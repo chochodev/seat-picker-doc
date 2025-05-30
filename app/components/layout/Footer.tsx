@@ -3,7 +3,7 @@ import { Link } from '@remix-run/react';
 export function Footer() {
   return (
     <footer className="relative border-0 border-solid border-t border-slate-800 bg-slate-950">
-      <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 bg-gradient-to-b h-1 w-12 rounded mx-auto from-indigo-700 to-sky-700" />
+      <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 bg-gradient-to-b h-1 w-12 rounded mx-auto from-slate-700 to-slate-800" />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
@@ -69,6 +69,16 @@ export function Footer() {
                   className="text-base text-gray-300 hover:text-white"
                 >
                   Issues
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.npmjs.com/package/seat-picker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-gray-300 hover:text-white"
+                >
+                  NPM
                 </a>
               </li>
             </ul>
