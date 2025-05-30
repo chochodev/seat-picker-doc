@@ -1,41 +1,40 @@
-# Website
+# Welcome to Remix!
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+- 📖 [Remix docs](https://remix.run/docs)
 
-## Installation
+## Development
 
-```bash
-yarn
+Run the dev server:
+
+```shellscript
+npm run dev
 ```
-
-## Local Development
-
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Deployment
 
-Using SSH:
+First, build your app for production:
 
-```bash
-USE_SSH=true yarn deploy
+```sh
+npm run build
 ```
 
-Not using SSH:
+Then run the app in production mode:
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
+```sh
+npm start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Now you'll need to pick a host to deploy it to.
+
+### DIY
+
+If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+- `build/server`
+- `build/client`
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
