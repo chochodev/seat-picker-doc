@@ -1,9 +1,9 @@
-import { Link } from '@remix-run/react';
+import { Link } from "@remix-run/react";
 
 export function Footer() {
   return (
-    <footer className="relative border-0 border-solid border-t border-slate-800 bg-slate-950">
-      <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 bg-slate-950 h-1 w-12 rounded mx-auto border-solid border border-slate-800" />
+    <footer className="relative border-0 border-t border-solid border-slate-800 bg-slate-950">
+      <div className="absolute -top-0.5 left-1/2 mx-auto h-1 w-12 -translate-x-1/2 rounded border border-solid border-slate-800 bg-slate-950" />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>

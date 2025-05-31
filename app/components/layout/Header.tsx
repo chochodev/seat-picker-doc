@@ -1,15 +1,15 @@
-import { Link } from '@remix-run/react';
-import { useState } from 'react';
-import { FiSearch, FiGithub } from 'react-icons/fi';
+import { Link } from "@remix-run/react";
+import { useState } from "react";
+import { FiSearch, FiGithub } from "react-icons/fi";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
 
   // Keyboard shortcut for search (Ctrl+K) can be added with useEffect if needed
 
   return (
-    <header className="sticky top-0 z-50 w-full border-0 border-solid border-b border-slate-800 bg-slate-950 shadow">
+    <header className="sticky top-0 z-50 w-full border-0 border-b border-solid border-slate-800 bg-slate-950 shadow">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center space-x-3">
@@ -19,7 +19,7 @@ export function Header() {
               alt="Seat Picker"
               className="h-7 w-auto"
             />
-            <span className="text-xl font-bold text-white inline">
+            <span className="inline text-xl font-bold text-white">
               Seat Picker
             </span>
           </Link>
@@ -28,29 +28,29 @@ export function Header() {
         {/* Nav links */}
         <nav className="hidden items-center space-x-6 md:flex">
           {/* Search bar (desktop) */}
-          <button className="relative flex items-center justify-center gap-1 w-24 rounded-full border border-solid border-slate-800 bg-slate-900 py-2  h-8 text-sm text-white placeholder-gray-400 outline-none transition focus:border-sky-400 focus:ring-1 focus:ring-sky-400">
+          <button className="relative flex h-8 w-24 items-center justify-center gap-1 rounded-full border border-solid border-slate-800 bg-slate-900 py-2 text-sm text-white placeholder-gray-400 outline-none transition focus:border-sky-400 focus:ring-1 focus:ring-sky-400">
             <FiSearch className="pointer-events-none text-lg text-sky-400" />
-            <span className="w-max select-none rounded bg-slate-800 px-2 py-0.5 text-xs font-mono text-sky-400 opacity-95">
+            <span className="w-max select-none rounded bg-slate-800 px-2 py-0.5 font-mono text-xs text-sky-400 opacity-95">
               Ctrl K
             </span>
           </button>
 
           {/* Nav links */}
           <Link
-            to="/docs"
-            className="text-sm font-medium text-gray-300 hover:text-white transition"
+            to="/docs/getting-started"
+            className="text-sm font-medium text-gray-300 transition hover:text-white"
           >
             Docs
           </Link>
           <Link
             to="/blog"
-            className="text-sm font-medium text-gray-300 hover:text-white transition"
+            className="text-sm font-medium text-gray-300 transition hover:text-white"
           >
             Blog
           </Link>
           <Link
             to="/showcase"
-            className="text-sm font-medium text-gray-300 hover:text-white transition"
+            className="text-sm font-medium text-gray-300 transition hover:text-white"
           >
             Showcase
           </Link>
@@ -58,7 +58,7 @@ export function Header() {
             href="https://github.com/chochodev/seat-picker-lib"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-400 hover:text-white transition"
+            className="text-xl text-gray-400 transition hover:text-white"
           >
             <FiGithub />
           </a>
@@ -97,7 +97,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-800 bg-slate-950">
+        <div className="border-t border-slate-800 bg-slate-950 md:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
             <Link
               to="/docs"
@@ -121,7 +121,7 @@ export function Header() {
               href="https://github.com/chochodev/seat-picker-lib"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white flex items-center gap-2"
+              className="flex items-center gap-2 rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white"
             >
               <FiGithub /> GitHub
             </a>
@@ -138,7 +138,7 @@ export function Header() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <span className="absolute right-3 top-1/2 -translate-y-1/2 select-none rounded bg-slate-800 px-2 py-0.5 text-xs font-mono text-sky-400 opacity-80">
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 select-none rounded bg-slate-800 px-2 py-0.5 font-mono text-xs text-sky-400 opacity-80">
                 Ctrl K
               </span>
             </div>
