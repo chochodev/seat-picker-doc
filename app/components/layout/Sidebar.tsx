@@ -28,6 +28,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { Link } from '@remix-run/react';
+import { LuStar } from 'react-icons/lu';
 
 const sidebarSections = [
   {
@@ -35,6 +36,7 @@ const sidebarSections = [
     label: 'Documentation',
     icon: FileText,
     tooltip: 'Documentation',
+    defaultOpen: true,
     items: [
       { label: 'Getting Started', to: '#', icon: null },
       { label: 'API Reference', to: '#', icon: null },
@@ -45,7 +47,6 @@ const sidebarSections = [
     label: 'Playground',
     icon: Play,
     tooltip: 'Playground',
-    defaultOpen: true,
     items: [
       { label: 'History', to: '#', icon: History },
       { label: 'Starred', to: '#', icon: Star },
@@ -117,9 +118,9 @@ export default function AppSidebar() {
                           tooltip={section.tooltip}
                           className="w-full"
                         >
-                          <section.icon className="h-4 w-4" />
-                          <span>{section.label}</span>
-                          <ChevronRight className="ml-auto h-4 w-4 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                          <section.icon className="h-4 w-4 text-slate-100" />
+                          <span className="text-slate-100">{section.label}</span>
+                          <ChevronRight className="ml-auto h-4 w-4 text-slate-300 ease-200 group-data-[state=open]/collapsible:rotate-90" />
                         </SidebarMenuButton>
                       </CollapsibleTrigger>
                       <CollapsibleContent>
@@ -157,24 +158,19 @@ export default function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="border-t p-4">
+      <SidebarFooter className="border-0 border-solid border-t border-slate-800 p-4">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+            <a
+              href="https://github.com/chochodev/seat-picker-lib"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 w-full px-4 py-2 rounded-md hover:bg-slate-800/20 ease-200 hover:scale-105 active:scale-95"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-500">
-                <span className="text-sm font-medium text-white">S</span>
-              </div>
-              <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">shadcn</span>
-                <span className="truncate text-xs text-muted-foreground">
-                  m@example.com
-                </span>
-              </div>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
+              <LuStar className="h-4 w-4 text-yellow-400" />
+              <span className="font-medium text-sm text-slate-100">Star us on GitHub</span>
+            </a>
+        </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
