@@ -1,7 +1,8 @@
 import APIReferenceSection from "./sections_/APIReference";
-import CustomerViewerSection from './sections_/CustomerViewer';
+import CustomerViewerSection from "./sections_/CustomerViewer";
 import EventPropActionsSection from "./sections_/EventPropActions";
 import UsageSection from "./sections_/Usage";
+import BottomNav from "~/components/rfc/BottomNav";
 
 export default function UsagePage() {
   return (
@@ -9,7 +10,7 @@ export default function UsagePage() {
       <section id="usage">
         <UsageSection />
       </section>
-      
+
       {/* Horizontal Rule */}
       <hr className="my-12 mb-0 h-[1px] w-full bg-slate-700" />
 
@@ -23,13 +24,20 @@ export default function UsagePage() {
       <section id="customer-viewer">
         <CustomerViewerSection />
       </section>
-      
+
       {/* Horizontal Rule */}
       <hr className="my-12 mb-0 h-[1px] w-full bg-slate-700" />
 
       <section id="api-reference">
         <APIReferenceSection />
       </section>
+
+      <BottomNav
+        nextLabel="Playground"
+        prevLabel="Getting Started"
+        nextLink="/docs/playground"
+        prevLink="/docs/getting-started"
+      />
     </div>
   );
 }

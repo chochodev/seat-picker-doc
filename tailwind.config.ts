@@ -5,6 +5,9 @@ export default {
   darkMode: ["class"],
   theme: {
     extend: {
+      screens: {
+        xsm: "480px",
+      },
       fontSize: {
         xsm: "0.75rem",
         xs: "0.625rem",

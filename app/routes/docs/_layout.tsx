@@ -11,7 +11,9 @@ const DocLayout = () => {
         <AppSidebar />
         <div className="flex-1">
           <Header />
-          <Outlet />
+          <main className="px-4 xsm:px-6 md:px-8">
+            <Outlet />
+          </main>
           <Footer />
         </div>
       </SidebarProvider>

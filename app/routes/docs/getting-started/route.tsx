@@ -1,8 +1,8 @@
 import CodeBlock from "~/components/rfc/CodeBlock";
-
+import BottomNav from "~/components/rfc/BottomNav";
 export default function InstallationPage() {
   return (
-    <div className="mx-auto max-w-6xl py-12">
+    <section className="mx-auto max-w-6xl py-12">
       <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-sky-400">
         Installation
       </h2>
@@ -38,6 +38,10 @@ export default function InstallationPage() {
           />
         </div>
       </div>
-    </div>
+      <BottomNav
+        nextLabel="Usage"
+        nextLink="/docs/usage"
+      />
+    </section>
   );
 }

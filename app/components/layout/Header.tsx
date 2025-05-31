@@ -1,8 +1,11 @@
-import { Link } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { FiSearch, FiGithub } from "react-icons/fi";
+import { SidebarTrigger } from "~/components/ui/sidebar";
 
 export function Header() {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -49,7 +52,7 @@ export function Header() {
             Blog
           </Link>
           <Link
-            to="/showcase"
+            to="https://seat-picker-six.vercel.app"
             className="text-sm font-medium text-gray-300 transition hover:text-white"
           >
             Showcase
@@ -65,34 +68,23 @@ export function Header() {
         </nav>
 
         {/* Mobile menu button */}
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-800 hover:text-white md:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-800 hover:text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
+            <span className="sr-only">Open main menu</span>
             {!isMobileMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+              <Menu className="h-6 w-6" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <X className="h-6 w-6" />
             )}
-          </svg>
-        </button>
+          </button>
+          {location.pathname.startsWith('/docs') && (
+            <SidebarTrigger />
+          )}
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -112,7 +104,7 @@ export function Header() {
               Blog
             </Link>
             <Link
-              to="/showcase"
+              to="https://seat-picker-six.vercel.app"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white"
             >
               Showcase

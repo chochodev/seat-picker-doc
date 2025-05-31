@@ -20,13 +20,12 @@ import {
 } from "~/components/ui/collapsible";
 import {
   Play,
-  History,
   Star,
-  Settings,
   Box,
   FileText,
   ChevronRight,
 } from "lucide-react";
+import { RiSlideshow3Line } from "react-icons/ri";
 import { Link } from "@remix-run/react";
 import { LuStar } from "react-icons/lu";
 
@@ -51,16 +50,15 @@ const sidebarSections = [
     icon: Play,
     tooltip: "Playground",
     items: [
-      { label: "History", to: "#", icon: History },
+      { label: "Showcase", to: "https://seat-picker-six.vercel.app", icon: RiSlideshow3Line },
       { label: "Starred", to: "#", icon: Star },
-      { label: "Settings", to: "#", icon: Settings },
     ],
   },
   {
     type: "collapsible",
-    label: "Models",
+    label: "Demos",
     icon: Box,
-    tooltip: "Models",
+    tooltip: "Demos",
     items: [
       { label: "GPT-4", to: "#", icon: null },
       { label: "Claude", to: "#", icon: null },
@@ -70,8 +68,8 @@ const sidebarSections = [
 
 export default function AppSidebar() {
   return (
-    <Sidebar className="border-0 border-r border-solid border-slate-800">
-      <SidebarHeader className="flex h-[calc(4rem+1px)] justify-center border-0 border-b border-solid border-slate-800 px-4">
+    <Sidebar className="border-0 border-r border-solid border-slate-800 bg-slate-950">
+      <SidebarHeader className="flex h-[calc(4rem+1px)] justify-center border-0 border-b border-solid border-slate-800 px-4 bg-slate-950">
         <div className="flex items-center gap-3">
           <Link
             to="https://npmjs.com/package/seat-picker"
@@ -94,7 +92,7 @@ export default function AppSidebar() {
         </div>
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="bg-slate-950">
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
             Platform
@@ -156,7 +154,7 @@ export default function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="border-0 border-t border-solid border-slate-800 p-4">
+      <SidebarFooter className="border-0 border-t border-solid border-slate-800 p-4 bg-slate-950">
         <SidebarMenu>
           <SidebarMenuItem>
             <a
