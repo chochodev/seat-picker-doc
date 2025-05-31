@@ -58,7 +58,7 @@ export default function CodeBlock({
   language,
   filename,
   showHeader = true,
-  className = "max-w-2xl",
+  className = "max-w-full w-2xl",
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
   const [highlightedCode, setHighlightedCode] = useState("");
@@ -86,7 +86,12 @@ export default function CodeBlock({
   };
 
   return (
-    <div className={cn("relative overflow-hidden rounded-[1rem] border border-solid border-slate-700 bg-slate-900 shadow-2xl", className)}>
+    <div
+      className={cn(
+        "relative overflow-hidden rounded-[1rem] border border-solid border-slate-700 bg-slate-900 shadow-2xl",
+        className,
+      )}
+    >
       {showHeader && (
         <div className="flex items-center justify-between bg-slate-900 px-2 py-2">
           {filename && (
