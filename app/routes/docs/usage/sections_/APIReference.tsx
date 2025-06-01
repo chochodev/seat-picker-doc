@@ -9,7 +9,7 @@ export default function APIReferencePage() {
       <p className="mb-8 text-lg text-slate-300">
         All available props for <code>SeatPicker</code> and how to use them.
       </p>
-      <table className="mb-8 w-full overflow-hidden rounded-lg border border-slate-700 text-sm text-slate-300">
+      <table className="mb-8 w-full overflow-x-auto rounded-lg border border-slate-700 text-sm text-slate-300">
         <thead className="bg-slate-800 text-slate-200">
           <tr>
             <th className="p-2 text-left">Prop</th>
