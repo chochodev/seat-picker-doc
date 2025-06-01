@@ -50,8 +50,8 @@ const sidebarSections = [
     icon: Play,
     tooltip: "Playground",
     items: [
-      { label: "Showcase", to: "https://seat-picker-six.vercel.app", icon: RiSlideshow3Line },
-      { label: "Starred", to: "#", icon: Star },
+      { label: "Showcase", to: "/playground", icon: RiSlideshow3Line },
+      { label: "Viewer & Simulator", to: "/playground/viewer", icon: Star },
     ],
   },
   {
@@ -60,8 +60,8 @@ const sidebarSections = [
     icon: Box,
     tooltip: "Demos",
     items: [
-      { label: "GPT-4", to: "#", icon: null },
-      { label: "Claude", to: "#", icon: null },
+      { label: "Flights", to: "/playground", icon: null },
+      { label: "Hotels", to: "/playground", icon: null },
     ],
   },
 ];

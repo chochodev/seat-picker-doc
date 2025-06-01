@@ -6,12 +6,12 @@ import { Footer } from "~/components/layout/Footer";
 
 const DocLayout = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-slate-950">
       <SidebarProvider>
         <AppSidebar />
         <div className="flex-1">
           <Header />
-          <main className="px-4 xsm:px-6 md:px-8">
+          <main className="px-4 xsm:px-6 md:px-8 bg-slate-950">
             <Outlet />
           </main>
           <Footer />

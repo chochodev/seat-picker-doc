@@ -59,19 +59,19 @@
   }
 }
 
-html,
+/* html,
 body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
-}
+} */
 
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
 }
 

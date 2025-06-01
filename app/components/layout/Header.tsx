@@ -52,7 +52,7 @@ export function Header() {
             Blog
           </Link>
           <Link
-            to="https://seat-picker-six.vercel.app"
+            to="/playground"
             className="text-sm font-medium text-gray-300 transition hover:text-white"
           >
             Showcase
@@ -104,7 +104,7 @@ export function Header() {
               Blog
             </Link>
             <Link
-              to="https://seat-picker-six.vercel.app"
+              to="/playground"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white"
             >
               Showcase
