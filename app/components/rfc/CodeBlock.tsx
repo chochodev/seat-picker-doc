@@ -88,7 +88,7 @@ export default function CodeBlock({
   return (
     <div
       className={cn(
-        "relative max-w-[42rem] overflow-x-auto overflow-y-hidden rounded-[1rem] border border-solid border-slate-700 bg-slate-900 shadow-2xl",
+        "relative max-w-[42rem] overflow-hidden rounded-[1rem] border border-solid border-slate-700 bg-slate-900 shadow-2xl",
         className,
       )}
     >
