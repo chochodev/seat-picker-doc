@@ -55,7 +55,7 @@ export function Header() {
             to="/playground"
             className="text-sm font-medium text-gray-300 transition hover:text-white"
           >
-            Showcase
+            Playground
           </Link>
           <a
             href="https://github.com/chochodev/seat-picker-lib"
@@ -107,7 +107,7 @@ export function Header() {
               to="/playground"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white"
             >
-              Showcase
+              Playground
             </Link>
             <a
               href="https://github.com/chochodev/seat-picker-lib"

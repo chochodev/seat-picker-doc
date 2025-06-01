@@ -17,7 +17,7 @@ const Playground: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full text-black">
       <SeatPicker onChange={handleLayoutChange} onSave={handleSave} />
     </div>
   );
