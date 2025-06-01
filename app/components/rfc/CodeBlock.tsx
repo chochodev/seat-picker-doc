@@ -58,7 +58,7 @@ export default function CodeBlock({
   language,
   filename,
   showHeader = true,
-  className = "max-w-full w-2xl",
+  className = "max-w-[42rem]",
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
   const [highlightedCode, setHighlightedCode] = useState("");
@@ -88,7 +88,7 @@ export default function CodeBlock({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-[1rem] border border-solid border-slate-700 bg-slate-900 shadow-2xl",
+        "relative overflow-x-auto overflow-y-hidden rounded-[1rem] border border-solid border-slate-700 bg-slate-900 shadow-2xl",
         className,
       )}
     >
@@ -127,13 +127,13 @@ export default function CodeBlock({
         className={cn(
           "relative mb-1",
           showHeader
-            ? "mx-auto w-[calc(100%-8px)] rounded-[0.875rem] border border-solid border-slate-700"
+            ? "mx-auto w-[calc(100%-8px)] overflow-x-auto rounded-[0.875rem] border border-solid border-slate-700"
             : "",
         )}
       >
-        <pre className="m-auto w-[calc(100%-2px)] overflow-x-auto rounded-[1rem] !bg-slate-900 p-4 text-sm leading-relaxed">
+        <pre className="m-auto max-w-[calc(100%-2px)] rounded-[1rem] !bg-slate-900 p-4 text-sm leading-relaxed">
           <code
-            className={`language-${detectedLanguage} !bg-transparent font-mono`}
+            className={`language-${detectedLanguage} max-w-full !bg-transparent font-mono max-sm:text-sm`}
             dangerouslySetInnerHTML={{ __html: highlightedCode }}
           />
         </pre>
